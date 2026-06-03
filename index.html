@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayGuard AI Agent</title>
+    <style>
+        :root {
+            --bg-dark: #090d16;
+            --bg-card: #111827;
+            --border-glow: #1f2937;
+            --text-bright: #f9fafb;
+            --text-muted: #9ca3af;
+            --ibm-blue: #0f62fe;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-bright);
+            min-height: 100vh;
+            background: linear-gradient(135deg, #090d16 0%, #0f172a 100%);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 60px 20px;
+            overflow-y: auto;
+        }
+
+        /* Full Screen Documentation Center Container Layout */
+        .portfolio-main {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Top Bar Interface Setup */
+        .top-navigation-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            gap: 20px;
+        }
+
+        .left-meta {
+            flex: 1;
+        }
+
+        /* Floating Call-to-Action Instruction Box */
+        .chat-instruction-badge {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+            padding: 16px 24px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            line-height: 1.4;
+            max-width: 380px;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
+            animation: pulseGlow 2s infinite ease-in-out;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: translateY(0); box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15); }
+            50% { transform: translateY(-3px); box-shadow: 0 6px 25px rgba(16, 185, 129, 0.3); }
+            100% { transform: translateY(0); box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15); }
+        }
+
+        .header-badge {
+            background: rgba(15, 98, 254, 0.15);
+            color: var(--ibm-blue);
+            border: 1px solid var(--ibm-blue);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .lead-text {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 800px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--ibm-blue);
+            margin-bottom: 18px;
+            margin-top: 40px;
+            font-weight: 700;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .info-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .info-card h3 {
+            font-size: 1.05rem;
+            color: var(--text-bright);
+            margin-bottom: 8px;
+        }
+
+        .info-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Rules block telemetry */
+        .rules-log {
+            background-color: #030712;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-purple);
+            padding: 20px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.9rem;
+            color: #a7f3d0;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+        }
+
+        /* Privacy block style */
+        .privacy-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FULL SCREEN INTERFACE WRAPPER CENTER -->
+    <div class="portfolio-main">
+        
+        <!-- Header & Floating Call-To-Action Row Component -->
+        <div class="top-navigation-row">
+            <div class="left-meta">
+                <span class="header-badge">AI Risk Automation Ingestion Project</span>
+                <h1>PayGuard Fraud Analyzer</h1>
+            </div>
+            
+            <!-- Recruiter Interactive Navigation Directive Instruction Card -->
+            <div class="chat-instruction-badge">
+                💬 <b>Test the Live Agent:</b> Click on the chat icon in the bottom-right corner of your screen to open the active security assistant and start scanning mock transaction data instantly.
+            </div>
+        </div>
+
+        <p class="lead-text">An autonomous digital payments risk engine chaining multi-step telemetry workflows to catch anomalies under strict zero-PII security environments.</p>
+
+        <div class="section-title">Core AI Engineering Parameters</div>
+        <div class="grid-cards">
+            <!-- NEW ENTERPRISE ENGINE BLOCK: -->
+            <div class="info-card">
+                <h3>AI Orchestration Engine</h3>
+                <p>Configured natively with the default <b>watsonx Foundation Model</b> to handle logical system instructions and process multi-skill risk synthesis without exposing source banking databases.</p>
+            </div>
+            <div class="info-card">
+                <h3>Embedded RAG Knowledge Layer</h3>
+                <p>Dynamically ingests multi-source reference frameworks and compliance rules directly at the agent evaluation step, enabling advanced real-time context retrieval.</p>
+            </div>
+        </div>
+
+        <div class="section-title">Active Security Rulebook Reference</div>
+        <div class="rules-log">
+            Rule 101 (Time Threat): Execution 00:00 - 04:00 AM -> Risk Weight Score Metrics +30<br>
+            Rule 102 (Velocity Threat): Transaction > 4x standard daily average -> Risk Weight Score Metrics +35<br>
+            Rule 103 (Identity Shift): Unregistered hardware layout swap -> Risk Weight Score Metrics +22<br>
+            ----------------------------------------------------------------------------------------<br>
+            Compliance Mitigation Matrices Profiles:<br>
+            [Cumulative Score 0 - 39: Low Risk Profile]    -> Clear for Immediate Ledger Release Clearing<br>
+            [Cumulative Score 40 - 69: Medium Risk Profile] -> Generate Webhook MFA Verification Request Challenge<br>
+            [Cumulative Score 70+: High Risk Profile]       -> Direct Hold, Abort Session Execution + Forced Biometrics Override
+        </div>
+
+        <div class="section-title">Data Privacy & Information Shield Architecture</div>
+        <div class="privacy-box">
+            <p><strong>Zero PII Intake Enforcement:</strong> Specialized instructions prevent the large language model from accepting personal data. Inbound transaction strings undergo localized structural formatting validation. Account lines, personal customer identifier indexes, and credit card primary security keys are parsed out before rule verification cycles trigger.</p>
+        </div>
+    </div>
+<script>
+  window.wxOConfiguration = {
+    orchestrationID: "26d08d72179a48789ddaba8b72d7d06f_af9d4809-d741-4b98-baff-830e6f9221c4",
+    hostURL: "https://au-syd.watson-orchestrate.cloud.ibm.com",
+    rootElementID: "root",
+    deploymentPlatform: "ibmcloud",
+    crn: "crn:v1:bluemix:public:watsonx-orchestrate:au-syd:a/26d08d72179a48789ddaba8b72d7d06f:af9d4809-d741-4b98-baff-830e6f9221c4::",
+    chatOptions: {
+        agentId: "2ea92578-2602-4d93-9bf9-9478302b8ecd", 
+        agentEnvironmentId: "b2a9e95a-ac07-460b-91f6-c50335cf23a5",
+    }
+  };
+  setTimeout(function () {
+    const script = document.createElement('script');
+    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+    script.addEventListener('load', function () {
+        wxoLoader.init();
+    });
+    document.head.appendChild(script);
+  }, 0);                     
+</script>
+
+</body>
+</html>
